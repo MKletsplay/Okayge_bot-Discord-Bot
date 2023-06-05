@@ -162,4 +162,4 @@ client.on('interactionCreate', (interaction) => {
 */
 
 client.login(process.env.TOKEN);
-//client.login("MTA4NjQwMTc1MTQzNzAyMTE5NA.GndAMa.-uR7PCEkOvfb3uO500ollf0Bwlwh_ofR2nIg5Y");
+//client.login("");
