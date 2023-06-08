@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const { devs, testServer } = require('../../../config.json');
 const getLocalCommands = require('../../utils/getLocalCommands');
 
@@ -64,3 +65,6 @@ module.exports = async (client, interaction) => {
     console.log(`There was an error running this command: ${error}`);
   }
 };
+=======
+module.exports = (client, interaction) => {};
+>>>>>>> 4995ba2a94ed14dd2dd64610399d430e89f5a899
