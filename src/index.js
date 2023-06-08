@@ -23,10 +23,11 @@ client.on('ready', (client) => {
     
 });
 
-client.on('messageCreate', (message)=> {
-  
- 
+*/
 
+
+
+client.on('messageCreate', (message)=> {
 
 console.log(`${message.author.tag}: ${message} 
   
@@ -41,7 +42,9 @@ Nachricht Informationen:
   }
 ------------------------------------------------------------------------------------------------------------------------------------`)
 })
-  
+
+
+/*
 client.on('messageCreate', (message) => {
   if (message.author.bot) {
     return;
@@ -158,8 +161,8 @@ client.on('interactionCreate', (interaction) => {
 });
 
 
-
 */
+
 
 client.login(process.env.TOKEN);
 //client.login("MTA4NjQwMTc1MTQzNzAyMTE5NA.GndAMa.-uR7PCEkOvfb3uO500ollf0Bwlwh_ofR2nIg5Y");
