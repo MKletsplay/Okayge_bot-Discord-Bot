@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 require('dotenv').config();
 const { Client, IntentsBitField } = require('discord.js');
 const eventHandler = require('./handlers/eventHandler');
@@ -16,30 +16,22 @@ const client = new Client({
 eventHandler(client);
 
 
-/*
-client.on('ready', (client) => {
-  console.log(`------------------------------------------------------------------------------------------------------------------------------------`);
-    console.log(`${client.user.tag} is online ✅`);
-    console.log(`------------------------------------------------------------------------------------------------------------------------------------`);
-    
-});
 
-*/
 
 
 
 client.on('messageCreate', (message)=> {
 
-console.log(`${message.author.tag}: ${message} 
-  
-Nachricht Informationen:
+  console.log(`${message.author.tag}: ${message} 
+    
+  Nachricht Informationen:
   {
-  Zeitpunkt:      ${message.createdAt} 
-  ID:             ${message.id}
-  Channel (+ID):  ${message.channel} - ${message.channelId}
-  Typ (URL):      ${message.type} (https://s.lain.la/Svbnh )
-  Url:            ${message.url}
-  Bot:            ${message.author.bot}
+    Zeitpunkt:      ${message.createdAt} 
+    ID:             ${message.id}
+    Channel (+ID):  ${message.channel} - ${message.channelId}
+    Typ (URL):      ${message.type} (https://s.lain.la/Svbnh )
+    Url:            ${message.url}
+    Bot:            ${message.author.bot}
   }
 ------------------------------------------------------------------------------------------------------------------------------------`)
 })
@@ -164,25 +156,6 @@ client.on('interactionCreate', (interaction) => {
 
 */
 
-
-client.login(process.env.TOKEN);
-//client.login("MTA4NjQwMTc1MTQzNzAyMTE5NA.GndAMa.-uR7PCEkOvfb3uO500ollf0Bwlwh_ofR2nIg5Y");
-=======
-require('dotenv').config();
-const { Client, IntentsBitField } = require('discord.js');
-const eventHandler = require('./handlers/eventHandler');
-
-const client = new Client({
-  intents: [
-    IntentsBitField.Flags.Guilds,
-    IntentsBitField.Flags.GuildMembers,
-    IntentsBitField.Flags.GuildMessages,
-    IntentsBitField.Flags.MessageContent,
-  ],
-});
-
-
-eventHandler(client);
 
 
 /*
@@ -332,5 +305,3 @@ client.on('interactionCreate', (interaction) => {
 */
 
 client.login(process.env.TOKEN);
-//client.login("");
->>>>>>> 4995ba2a94ed14dd2dd64610399d430e89f5a899
