@@ -1,15 +1,21 @@
 require('dotenv').config();
-const {Client, IntentsBitField } = require('discord.js');
-const client = new Client ({
-    intents:[
+const { Client, IntentsBitField } = require('discord.js');
+const eventHandler = require('./handlers/eventHandler');
+
+const client = new Client({
+  intents: [
     IntentsBitField.Flags.Guilds,
     IntentsBitField.Flags.GuildMembers,
     IntentsBitField.Flags.GuildMessages,
     IntentsBitField.Flags.MessageContent,
-]})
+  ],
+});
 
 
+eventHandler(client);
 
+
+/*
 client.on('ready', (client) => {
   console.log(`------------------------------------------------------------------------------------------------------------------------------------`);
     console.log(`${client.user.tag} is online ✅`);
@@ -153,7 +159,7 @@ client.on('interactionCreate', (interaction) => {
 
 
 
+*/
 
-
-//client.login(process.env.TOKEN);
-client.login("MTA4NjQwMTc1MTQzNzAyMTE5NA.GZMrL-.jppoWyoREDpvgINLTYHfVN-CoFPzILuhzc-9qM");
+client.login(process.env.TOKEN);
+//client.login("MTA4NjQwMTc1MTQzNzAyMTE5NA.GndAMa.-uR7PCEkOvfb3uO500ollf0Bwlwh_ofR2nIg5Y");
