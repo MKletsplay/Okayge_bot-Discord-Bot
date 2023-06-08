@@ -51,7 +51,7 @@ client.on('messageCreate', (message) => {
 
 
 });
-
+*/
 
 client.on('messageCreate', (msg) => {
   // Überprüfen, ob die Nachricht vom Bot selbst oder einem anderen Bot stammt
@@ -76,8 +76,8 @@ client.on('messageCreate', (msg) => {
   
 });
 
-
-
+client.login(process.env.TOKEN);
+/*
 client.on('interactionCreate', (interaction) => {
   if (!interaction.isChatInputCommand()) return;
 
@@ -304,4 +304,3 @@ client.on('interactionCreate', (interaction) => {
 
 */
 
-client.login(process.env.TOKEN);
