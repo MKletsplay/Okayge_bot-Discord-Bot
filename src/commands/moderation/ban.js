@@ -27,7 +27,7 @@ const {
       }
   
       if (targetUser.id === interaction.guild.ownerId) {
-        await interaction.editReply(
+        await interaction.editReply( 
           "You can't ban that user because they're the server owner."
         );
         return;
