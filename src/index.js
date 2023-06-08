@@ -19,6 +19,8 @@ eventHandler(client);
 
 
 
+
+
 client.on('messageCreate', (message)=> {
 
   console.log(`${message.author.tag}: ${message} 
@@ -36,7 +38,7 @@ client.on('messageCreate', (message)=> {
 })
 
 
-/*
+
 client.on('messageCreate', (message) => {
   if (message.author.bot) {
     return;
@@ -50,7 +52,7 @@ client.on('messageCreate', (message) => {
 
 
 });
-*/
+
 
 client.on('messageCreate', (msg) => {
   // Überprüfen, ob die Nachricht vom Bot selbst oder einem anderen Bot stammt
@@ -76,7 +78,47 @@ client.on('messageCreate', (msg) => {
 });
 
 client.login(process.env.TOKEN);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*
+
+
 client.on('interactionCreate', (interaction) => {
   if (!interaction.isChatInputCommand()) return;
 
@@ -153,11 +195,11 @@ client.on('interactionCreate', (interaction) => {
 });
 
 
-*/
 
 
 
-/*
+
+
 client.on('ready', (client) => {
   console.log(`------------------------------------------------------------------------------------------------------------------------------------`);
     console.log(`${client.user.tag} is online ✅`);
@@ -301,5 +343,6 @@ client.on('interactionCreate', (interaction) => {
 
 
 
-*/
 
+
+*/
