@@ -1,5 +1,5 @@
 require('dotenv').config();
-const { Client, IntentsBitField } = require('discord.js');
+const { Client, IntentsBitField, GuildChannel } = require('discord.js');
 const eventHandler = require('./handlers/eventHandler');
 const client = new Client({
   intents: [
@@ -22,8 +22,8 @@ client.on('messageCreate', (message)=> {
   Nachricht Informationen:
     {
     Zeitpunkt:      ${message.createdAt} 
-    ID:             ${message.id}
-    Channel (+ID):  ${message.channel} - ${message.channelId}
+    Nachricht-ID:   ${message.id}
+    Channel (+ID):  ${message.channel.name} - ${message.channelId}
     Typ (URL):      ${message.type} (https://s.lain.la/Svbnh )
     Url:            ${message.url}
     Bot:            ${message.author.bot}
@@ -33,4 +33,13 @@ client.on('messageCreate', (message)=> {
 
 
 
+  client.on('messageCreate', (message) => {
+
+    if (message.author.bot == true) {
+      message.delete()
+    }
+
+  })
+
+  
 client.login(process.env.TOKEN);
