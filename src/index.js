@@ -27,12 +27,13 @@ client.on('messageCreate', (message)=> {
     Typ (URL):      ${message.type} (https://s.lain.la/Svbnh )
     Url:            ${message.url}
     Bot:            ${message.author.bot}
+    System:         ${message.system}
     }
   ------------------------------------------------------------------------------------------------------------------------------------`)
   })
 
 
-
+/*
   client.on('messageCreate', (message) => {
 
     if (message.author.bot == true) {
@@ -40,6 +41,6 @@ client.on('messageCreate', (message)=> {
     }
 
   })
-
+*/
   
 client.login(process.env.TOKEN);
